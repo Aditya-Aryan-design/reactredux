@@ -1,22 +1,16 @@
-import React from 'react'
-import Header from './components/Header'
-import Home from './components/Home'
-import Login from './components/Login'
-import Signin from './components/Signin'
-import Footer from './components/Footer'
-import { Routes,Route } from 'react-router-dom'
+
+import Main from "./components/Main"
+import Adduser from "./components/Adduser"
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
-    <div className='h-screen bg-neutral-100 flex flex-col justify-between'>
-      <Header />
-      <Routes>   
-        <Route path='/' element={<Home/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/signin' element={<Signin/>}/>
-      </Routes>
-      <Footer />
+    <div className="flex flex-col items-center">
+      <Navbar />
+      <Main />
+      <Adduser />
     </div>
   )
 }
+
 export default App
